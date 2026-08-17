@@ -96,8 +96,8 @@ print(dev.get_career_goal())`
             <div className="flex items-center gap-4 sm:gap-5">
               <div className="relative group">
                 {/* Glowing Gradient Ring */}
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 via-violet-600 to-pink-500 opacity-75 blur-sm group-hover:opacity-100 transition duration-500 animate-pulse-glow" />
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white dark:border-slate-800 shadow-xl bg-slate-900 flex-shrink-0">
+                <div className="absolute -inset-2 rounded-full opacity-90 group-hover:opacity-100 transition duration-500 animate-pulse-glow" style={{ background: 'linear-gradient(90deg, rgba(37,99,235,0.12), rgba(139,92,246,0.12), rgba(236,72,153,0.12))', filter: 'blur(8px)' }} />
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl bg-slate-900 flex-shrink-0">
                   <img
                     src={avatarUrl}
                     alt="Prashanth Singh B M"
@@ -154,7 +154,7 @@ print(dev.get_career_goal())`
               <a
                 href="#projects"
                 id="hero-view-projects-btn"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 text-white text-sm font-semibold rounded-xl hover:bg-blue-700 active:scale-[0.98] transition-all shadow-md shadow-blue-600/20"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 btn-primary text-sm font-semibold rounded-xl active:scale-[0.98] transition-all"
               >
                 <span>Explore Projects</span>
                 <ArrowUpRight className="w-4 h-4" />
