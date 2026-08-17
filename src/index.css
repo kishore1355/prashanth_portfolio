@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Dark Mode Overrides */
+.dark body {
+  background-color: #030712;
+  color: #F8FAFC;
+}
+
+.dark .glass-nav {
+  background: rgba(3, 7, 18, 0.85);
+  border-color: rgba(30, 41, 59, 0.8);
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(30, 41, 59, 0.8);
+}
+
+.glass-nav {
+  background: rgba(248, 250, 252, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Magic Spotlight & Glow Backgrounds */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Glowing Magic Border Effect */
+.magic-gradient-border {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.magic-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 1.1rem;
+  background: linear-gradient(135deg, #2563EB, #3B82F6, #8B5CF6, #EC4899, #2563EB);
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: magicGradientMove 6s ease infinite;
+}
+
+@keyframes magicGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shimmer pulse for button badges */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+
